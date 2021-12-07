@@ -6,8 +6,8 @@
                     <div class="header-top-left">
                         <ul>
                             <li class="d-none d-xl-flex"><i class="flaticon-location"></i> 14/A, Queen Street City, New York, US</li>
-                            <li class="d-none d-lg-flex"><i class="flaticon-email"></i> info@example.com</li>
-                            <li><i class="flaticon-clock"></i> Opening Time : 10: AM - 10 PM</li>
+                            <li class="d-none d-lg-flex"><i class="flaticon-email"></i> contact@afrikascribe.com</li>
+                            <li><i class="flaticon-clock"></i> Heure d'ouverture: 8h30 - 18h30</li>
                         </ul>
                     </div>
                 </div>
@@ -54,7 +54,7 @@
                                             <li><a href="{{ url('nos-partenaires') }}">Nos Partenaires</a></li>
                                         </ul>
                                     </li>
-                                    <li class="menu-item-has-children"><a href="services.html">Nos Services</a>
+                                    <li class="menu-item-has-children"><a href="#">Nos Services</a>
                                         <ul class="sub-menu">                                              
                                             <li><a href="{{ url('relecture-correction') }}">Relectures et Corrections</a></li>
                                             <li><a href="{{ url('traduction-professionnelle') }}">Traduction et Certification</a></li>

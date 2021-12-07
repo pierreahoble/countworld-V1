@@ -33,7 +33,8 @@
                 <div class="contact-title">
                     <h3 class="title">Entrer en contact</h3>
                 </div>
-                <form action="{{ url('nous-contacter') }}" class="contact-form">
+                <form action="{{ url('nous-contacter') }}" class="contact-form" method="post">
+                    @csrf
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-grp">

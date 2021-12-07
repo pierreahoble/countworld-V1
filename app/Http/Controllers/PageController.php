@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\contactmail;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class PageController extends Controller
 {
@@ -35,7 +37,10 @@ class PageController extends Controller
 
     public function sendmail(REQUEST $request)
     {
-      return $request;
+      $data = $request;
+      //  return $request;
+
+      Mail::to('contact@afrikascribe.com')->send(new contactmail($request));
     }
 
 

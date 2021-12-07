@@ -2185,7 +2185,8 @@ var Commande = /*#__PURE__*/function (_Component) {
       nombreDeMot: '',
       delaiDuDoc: '',
       domaineDuDoc: '',
-      montant: ''
+      montant: '',
+      load: true
     };
     return _this;
   }
@@ -2222,7 +2223,8 @@ var Commande = /*#__PURE__*/function (_Component) {
 
             _this2.setState({
               nombreDeMot: nbre,
-              montant: nbre * 0.5
+              montant: nbre * 0.5,
+              load: false
             });
           }
         });
@@ -2517,53 +2519,57 @@ var Commande = /*#__PURE__*/function (_Component) {
                     })
                   })
                 })]
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
                 className: "col-xl-4 col-lg-5",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-                  className: "card",
-                  style: {
-                    width: "25rem"
-                  },
-                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h5", {
-                    className: "card-header",
-                    children: "Commande relecture et correction"
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-                    className: "card-body",
-                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("ul", {
-                      className: "list-group",
-                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("li", {
-                        className: "list-group-item",
-                        children: ["Nombre de mots : ", ' ' + this.state.nombreDeMot, " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
-                          id: "val"
-                        }), " "]
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("li", {
-                        className: "list-group-item",
-                        children: ["Langue document : ", ' ' + this.state.langueDuDoc]
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("li", {
-                        className: "list-group-item",
-                        children: ["Type du document : ", ' ' + this.state.typeDeDoc]
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("li", {
-                        className: "list-group-item",
-                        children: ["D\xE9lai : ", ' ' + this.state.delaiDuDoc > 1 ? "".concat(this.state.delaiDuDoc + ' ', "Semaines") : "".concat(this.state.delaiDuDoc + ' ', "Semaine"), " "]
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("li", {
-                        className: "list-group-item",
-                        children: "Domaine : "
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("form", {
+                  action: "#",
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+                    className: "card",
+                    style: {
+                      width: "25rem"
+                    },
+                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h5", {
+                      className: "card-header",
+                      children: "Commande relecture et correction"
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+                      className: "card-body",
+                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("ul", {
+                        className: "list-group",
+                        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("li", {
+                          className: "list-group-item",
+                          children: ["Nombre de mots : ", ' ' + this.state.nombreDeMot, " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
+                            id: "val"
+                          }), " "]
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("li", {
+                          className: "list-group-item",
+                          children: ["Langue document : ", ' ' + this.state.langueDuDoc]
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("li", {
+                          className: "list-group-item",
+                          children: ["Type du document : ", ' ' + this.state.typeDeDoc]
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("li", {
+                          className: "list-group-item",
+                          children: ["D\xE9lai : ", ' ' + this.state.delaiDuDoc > 1 ? "".concat(this.state.delaiDuDoc + ' ', "Semaines") : "".concat(this.state.delaiDuDoc + ' ', "Semaine"), " "]
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("li", {
+                          className: "list-group-item",
+                          children: "Domaine : "
+                        })]
+                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("hr", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("p", {
+                        children: ["Montant : ", this.state.montant ? this.state.montant + ' ' + 'FCFA' : '']
                       })]
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("hr", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("p", {
-                      children: ["Montant : ", this.state.montant ? this.state.montant + ' ' + 'FCFA' : '']
                     })]
-                  })]
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-                    className: "col-md-6 mt-4",
-                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("a", {
-                      href: "valider-la-commande",
-                      type: "submit",
-                      className: "btn",
-                      children: "Continuer la commande"
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+                      className: "col-md-6 mt-4",
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("button", {
+                        href: "valider-la-commande",
+                        type: "submit",
+                        className: "btn",
+                        disabled: this.state.load,
+                        children: "Continuer la commande"
+                      })
                     })
-                  })
-                })]
+                  })]
+                })
               })]
             })
           })

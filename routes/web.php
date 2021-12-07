@@ -57,7 +57,8 @@ Route::get('auth/google/callback', [ConnexionController::class,'handleGoogleCall
 
 //Contact 
 Route::get('nous-contacter',[PageController::class,'contact_page']);
-// Route::post('nous-contacter',[PageController::class,'sendmail']);
+
+Route::post('nous-contacter',[PageController::class,'sendmail']);
 //A propos de nous 
 Route::get('qui-sommes-nous',[PageController::class,'apropos']);
 //Notre equipe
