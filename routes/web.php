@@ -66,6 +66,8 @@ Route::get('notre-equipe',[PageController::class,'equipe']);
 //Nos partenaires
 Route::get('nos-partenaires',[PageController::class,'partenaire']);
 
+Route::get('tarifs',[CommandeController::class,'tarif']);
+
 
 
 //services additonnel

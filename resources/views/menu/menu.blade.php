@@ -59,6 +59,7 @@
                                             <li><a href="{{ url('relecture-correction') }}">Relectures et Corrections</a></li>
                                             <li><a href="{{ url('traduction-professionnelle') }}">Traduction et Certification</a></li>
                                             <li><a href="{{ url('comment-ca-marche') }}">Questions Fréquentes</a></li>
+                                            <li><a href="{{ url('tarifs') }}"> Combien sa coûte?</a></li>
                                         </ul>
                                     </li>
                                     {{-- <li class="menu-item-has-children"><a href="#">Pages</a>

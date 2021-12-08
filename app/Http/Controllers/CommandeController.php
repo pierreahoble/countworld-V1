@@ -94,11 +94,19 @@ class CommandeController extends Controller
 
 
 
+
       return response()->json($data, 200,);
     }
 
 
 
+
+
+
+    public function tarif()
+    {
+     return view('pages.tarif');
+    }
 
 
 

@@ -2077,6 +2077,8 @@ __webpack_require__(/*! ./components/Example */ "./resources/js/components/Examp
 
 __webpack_require__(/*! ./components/Commande */ "./resources/js/components/Commande.js");
 
+__webpack_require__(/*! ./components/Tarif */ "./resources/js/components/Tarif.js");
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
@@ -2635,6 +2637,426 @@ function Example() {
 if (document.getElementById('example')) {
   react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(Example, {}), document.getElementById('example'));
 }
+
+/***/ }),
+
+/***/ "./resources/js/components/Tarif.js":
+/*!******************************************!*\
+  !*** ./resources/js/components/Tarif.js ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Tarif": () => (/* binding */ Tarif)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+
+
+
+
+var Tarif = /*#__PURE__*/function (_Component) {
+  _inherits(Tarif, _Component);
+
+  var _super = _createSuper(Tarif);
+
+  function Tarif(props) {
+    var _this;
+
+    _classCallCheck(this, Tarif);
+
+    _this = _super.call(this, props);
+    _this.state = {
+      file: '',
+      langueDuDoc: '',
+      typeDeDoc: '',
+      nombreDeMot: '',
+      delaiDuDoc: '',
+      domaineDuDoc: '',
+      montant: '',
+      load: true
+    };
+    return _this;
+  }
+
+  _createClass(Tarif, [{
+    key: "onFileChange",
+    value: function onFileChange(e) {
+      var _this2 = this;
+
+      var headers = {
+        Authorization: "token",
+        'Content-Type': 'multipart/form-data'
+      };
+      var formData = new FormData();
+      var file = e.target.files[0]; // console.log(e.target.files[0])
+
+      formData.append('file', file);
+
+      if (formData.has('file')) {
+        // alert()
+        axios.post('http://127.0.0.1:8000/api/file-count', formData, {
+          headers: headers
+        }).then(function (response) {
+          var data = response.data; //    if (!data) {
+          //        console.log('rien')
+          //    }
+          //     else 
+
+          if (data.success === 0) {
+            alert('Vous devez choisir un fichier .pdf ou .doc');
+          } else {
+            var nbre = data.chaine;
+            console.log(data);
+
+            _this2.setState({
+              nombreDeMot: nbre,
+              montant: nbre * 0.5,
+              load: false
+            });
+          }
+        });
+      }
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this3 = this;
+
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("section", {
+          className: "standard-blog-area pt-120 pb-60",
+          id: "form",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+            className: "container",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+              className: "row",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h2", {
+                className: "title",
+                children: "1 - T\xE9l\xE9charger votre document *"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+                className: "col-xl-8 col-lg-7",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+                  className: "card",
+                  style: {
+                    width: "50rem"
+                  },
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h5", {
+                    className: "card-header text-center",
+                    children: "Fichier"
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+                    className: "card-body",
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("form", {
+                      action: "#",
+                      className: "contact-form",
+                      encType: "multipart/form-data",
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+                        className: "row",
+                        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+                          className: "col-md-12",
+                          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+                            className: "form-grp",
+                            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
+                              type: "file",
+                              id: "doc",
+                              onChange: this.onFileChange.bind(this),
+                              autoComplete: "off",
+                              required: true,
+                              className: "input-file-container",
+                              accept: ".pdf,.doc,.docx"
+                            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("label", {
+                              htmlFor: "doc",
+                              children: "Fichier Pdf ou Word*"
+                            })]
+                          })
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+                          className: "col-md-12",
+                          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+                            className: "text-center",
+                            children: "Fichiers selectionnees"
+                          })
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+                          className: "col-md-6",
+                          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+                            className: "form-grp",
+                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("select", {
+                              className: "form-select",
+                              value: this.state.langueDuDoc,
+                              "aria-label": "Default select example",
+                              onChange: function onChange(e) {
+                                return _this3.setState({
+                                  langueDuDoc: e.target.value
+                                });
+                              },
+                              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+                                value: "null",
+                                children: "Langue du document "
+                              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+                                value: "Fran\xE7ais",
+                                children: "Fran\xE7ais"
+                              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+                                value: "Anglais",
+                                children: "Anglais"
+                              })]
+                            })
+                          })
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+                          className: "col-md-6",
+                          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+                            className: "form-grp",
+                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("select", {
+                              className: "form-select",
+                              "aria-label": "Default select example",
+                              value: this.state.typeDeDoc,
+                              onChange: function onChange(e) {
+                                return _this3.setState({
+                                  typeDeDoc: e.target.value
+                                });
+                              },
+                              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+                                value: "null",
+                                children: "Type de documents"
+                              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+                                value: "M\xE9moire",
+                                children: "M\xE9moire"
+                              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+                                value: "Th\xE8se",
+                                children: "Th\xE8se"
+                              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+                                value: "Livre",
+                                children: "Livre"
+                              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+                                value: "Rapport",
+                                children: "Rapport"
+                              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("option", {
+                                value: "Autre",
+                                children: "Autre"
+                              })]
+                            })
+                          })
+                        })]
+                      })
+                    })
+                  })]
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h2", {
+                  className: "title  mt-5",
+                  children: "2 - S\xE9lection du d\xE9lai *"
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+                  className: "card mt-5",
+                  style: {
+                    width: "50rem"
+                  },
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+                    className: "card-body",
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("form", {
+                      action: "#",
+                      className: "contact-form",
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+                        className: "row",
+                        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+                          className: "col-md-3",
+                          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
+                            className: "contact-form-check",
+                            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
+                              type: "radio",
+                              value: "1",
+                              checked: this.state.delaiDuDoc === 1,
+                              onChange: function onChange(e) {
+                                return _this3.setState({
+                                  delaiDuDoc: e.target.value
+                                });
+                              },
+                              className: "form-check-input"
+                            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("label", {
+                              htmlFor: "cookies-consent",
+                              className: "form-check-label",
+                              children: "1 semaine"
+                            })]
+                          })
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+                          className: "col-md-3",
+                          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
+                            className: "contact-form-check",
+                            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
+                              type: "radio",
+                              value: "2",
+                              checked: this.state.delaiDuDoc === 2,
+                              onChange: function onChange(e) {
+                                return _this3.setState({
+                                  delaiDuDoc: e.target.value
+                                });
+                              },
+                              className: "form-check-input"
+                            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("label", {
+                              htmlFor: "cookies-consent",
+                              className: "form-check-label",
+                              children: "2 semaine"
+                            })]
+                          })
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+                          className: "col-md-3",
+                          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
+                            className: "contact-form-check",
+                            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
+                              type: "radio",
+                              value: "3",
+                              checked: this.state.delaiDuDoc === 3,
+                              onChange: function onChange(e) {
+                                return _this3.setState({
+                                  delaiDuDoc: e.target.value
+                                });
+                              },
+                              className: "form-check-input"
+                            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("label", {
+                              htmlFor: "cookies-consent",
+                              className: "form-check-label",
+                              children: "3 semaine"
+                            })]
+                          })
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+                          className: "col-md-3",
+                          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
+                            className: "contact-form-check",
+                            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
+                              type: "radio",
+                              value: "4",
+                              checked: this.state.delaiDuDoc === 4,
+                              onChange: function onChange(e) {
+                                return _this3.setState({
+                                  delaiDuDoc: e.target.value
+                                });
+                              },
+                              className: "form-check-input"
+                            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("label", {
+                              htmlFor: "cookies-consent",
+                              className: "form-check-label",
+                              children: "4 semaine"
+                            })]
+                          })
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+                          className: "col-md-3",
+                          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
+                            className: "contact-form-check",
+                            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
+                              type: "radio",
+                              value: "6",
+                              checked: this.state.delaiDuDoc === 6,
+                              onChange: function onChange(e) {
+                                return _this3.setState({
+                                  delaiDuDoc: e.target.value
+                                });
+                              },
+                              className: "form-check-input"
+                            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("label", {
+                              htmlFor: "cookies-consent",
+                              className: "form-check-label",
+                              children: "6 semaine"
+                            })]
+                          })
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+                          className: "col-md-3",
+                          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
+                            className: "contact-form-check",
+                            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
+                              type: "radio",
+                              value: "8",
+                              checked: this.state.delaiDuDoc === 8,
+                              onChange: function onChange(e) {
+                                return _this3.setState({
+                                  delaiDuDoc: e.target.value
+                                });
+                              },
+                              className: "form-check-input"
+                            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("label", {
+                              htmlFor: "cookies-consent",
+                              className: "form-check-label",
+                              children: "8 semaine"
+                            })]
+                          })
+                        })]
+                      })
+                    })
+                  })
+                })]
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+                className: "col-xl-4 col-lg-5",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("form", {
+                  action: "#",
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+                    className: "card",
+                    style: {
+                      width: "25rem"
+                    },
+                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h5", {
+                      className: "card-header",
+                      children: "Commande relecture et correction"
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+                      className: "card-body",
+                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("ul", {
+                        className: "list-group",
+                        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("li", {
+                          className: "list-group-item",
+                          children: ["Nombre de mots : ", ' ' + this.state.nombreDeMot, " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
+                            id: "val"
+                          }), " "]
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("li", {
+                          className: "list-group-item",
+                          children: ["Langue document : ", ' ' + this.state.langueDuDoc]
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("li", {
+                          className: "list-group-item",
+                          children: ["Type du document : ", ' ' + this.state.typeDeDoc]
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("li", {
+                          className: "list-group-item",
+                          children: ["D\xE9lai : ", ' ' + this.state.delaiDuDoc > 1 ? "".concat(this.state.delaiDuDoc + ' ', "Semaines") : "".concat(this.state.delaiDuDoc + ' ', "Semaine"), " "]
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
+                          className: "list-group-item",
+                          children: "Domaine : "
+                        })]
+                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("hr", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
+                        children: ["Montant : ", this.state.montant ? this.state.montant + ' ' + 'FCFA' : '']
+                      })]
+                    })]
+                  })
+                })
+              })]
+            })
+          })
+        })
+      });
+    }
+  }]);
+
+  return Tarif;
+}(react__WEBPACK_IMPORTED_MODULE_0__.Component);
+
+if (document.getElementById('tarif')) {
+  react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(Tarif, {}), document.getElementById('tarif'));
+} // export default Tarif
 
 /***/ }),
 
