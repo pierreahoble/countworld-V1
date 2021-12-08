@@ -26,6 +26,8 @@ Route::group(['middleware'=>'App\Http\Middleware\Authenticate'],function () {
 //Valider la commande
 Route::get('valider-la-commande',[CommandeController::class,'valider'])->name('passer-la-commande');
 
+// Route::get('valider-la-commande',[CommandeController::class,'send_paiement']);
+
 
 
 });

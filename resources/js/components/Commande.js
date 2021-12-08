@@ -236,7 +236,8 @@ export default class Commande extends Component {
 
 
                             <div className="col-xl-4 col-lg-5">
-                                <form action="#">
+                                <form action="valider-la-commande" method="get">
+                                    {/* <input type="text" name="" id="" name="_token" value="" /> */}
 
                                     <div className="card" style={{ width: "25rem" }}>
                                         <h5 className="card-header">Commande relecture et correction</h5>

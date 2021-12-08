@@ -10,15 +10,18 @@ class CommandeController extends Controller
 {
     public function index()
     {
+
        return view('pages.commande');
     }
 
 
 
-    public function valider()
+    public function valider(REQUEST $request)
     {
       return 'Well';
     }
+
+
 
 
     public function count_word_file(REQUEST $request)

@@ -32,19 +32,15 @@
             </div>
             <div class="col-lg-6">
                 <div class="section-title mb-30">
-                    <h2 class="title">We Provide Best Internet Connection World Wide</h2>
+                    <h2 class="title">- Qui sommes-nous?</h2>
                 </div>
                 <div class="about-content">
-                    <p>Yes! You'll be able to use your T-Mobile Home Internet to connect your computer, phone, and numerous other devices. Gauge your students’ skill level with the initial test and follow their progress.</p>
-                    <ul class="about-list">
-                        <li>Expert technical team</li>
-                        <li>Best network</li>
-                        <li>50+ coverage areas</li>
-                        <li>24/7 quick support</li>
-                        <li>Reasonable price packages</li>
-                        <li>Trusted &amp; recommended</li>
-                    </ul>
-                    <a href="contact.html" class="btn transparent-btn">Get Started</a>
+                    <p>
+                        AFRIKA SCRIBE a été fondée en 2015 par des professionnels africains issus de la diaspora et de l'Afrique. Aujourd’hui, nous sommes une équipe solide, expérimentée et internationale avec plus de 300 correcteurs à travers le monde.
+                    </p>   
+                    <p>
+                        Nous sommes de véritables experts en correction et relecture de mémoires, thèses de doctorat, rapports de stage, rapports professionnels et autres documents. Nous travaillons avec détermination pour assister les étudiants et les professionnels à atteindre leurs objectifs universitaires ou professionnels.
+                    </p>               
                 </div>
             </div>
         </div>
@@ -52,33 +48,90 @@
 </section>
 
 
+
 <section class="counter-area pt-115 pb-65">
     <div class="container">
         <div class="row">
-            <div class="col-lg-3 col-sm-6">
+            <div class="col-lg-4 col-sm-6">
+
+                <div class="pricing-three-item mb-30">
+                    <div class="pricing-three-head">                       
+                        <ul class="devices-icon-wrap">
+                            <img src="asset/img/icons/group.png" alt="" style="width: 100px">
+                        </ul>
+                    </div>
+                    <h6 class="title">Des correcteurs professionnels</h6> 
+                    <div class="pricing-three-list">
+                        <p>
+                            ls sont des professeurs d'universités en fonction ou retraités, de hauts cadres d'institutions internationales et des structures socio-professionnelles. Ils connaissent les exigences d'un travail de qualité et sont en mesure de répondre à vos besoins.
+                        </p>
+                    </div>
+                </div>
+
                 <div class="counter-item">
                     <h2 class="title"><span class="odometer odometer-auto-theme" data-count="50"><div class="odometer-inside"><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">5</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">0</span></span></span></span></span></div></span>+</h2>
-                    <p>Network Coverage Areas</p>
+                    <p>Client</p>
                 </div>
             </div>
-            <div class="col-lg-3 col-sm-6">
+            <div class="col-lg-4 col-sm-6">
+                <div class="pricing-three-item mb-30">
+                    <div class="pricing-three-head">                        
+                        <ul class="devices-icon-wrap">
+                            <img src="asset/img/icons/anonymat.png" alt="" style="width: 100px">
+                        </ul>
+                    </div>
+                    <h6 class="titlw">Anonymat et discrétion</h6>
+                    <div class="pricing-three-list">
+                        <p>
+                            Nous corrigeons votre document dans l'anonymat total et vos données restent confidentielles. Nos correcteurs sont soumis à une règle d'éthique et prennent un engagement ferme de respect de l'anonymat et de la confidentialité. Le système dématérialisé ne leur permet pas de connaître l'identité de l'auteur de la commande.
+                        </p>
+                    </div>
+                </div>
+
                 <div class="counter-item">
                     <h2 class="title"><span class="odometer odometer-auto-theme" data-count="25"><div class="odometer-inside"><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">2</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">5</span></span></span></span></span></div></span>k+</h2>
-                    <p>Happy Customers</p>
+                    <p>Projets</p>
                 </div>
             </div>
-            <div class="col-lg-3 col-sm-6">
+            <div class="col-lg-4 col-sm-6">
+                <div class="pricing-three-item mb-30">
+                    <div class="pricing-three-head">                        
+                        <ul class="devices-icon-wrap">
+                            <img src="asset/img/icons/translation.png" alt="" style="width: 100px">
+                        </ul>
+                    </div>
+                    <h6 class="title">Délais respectés</h6>
+                    <div class="pricing-three-list">
+                        <p>
+                            Nous prenons l'engagement de respecter les délais. Recevez un email quand votre document est corrigé.
+                        </p>
+                    </div>
+                </div>
+
                 <div class="counter-item">
                     <h2 class="title"><span class="odometer odometer-auto-theme" data-count="23"><div class="odometer-inside"><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">2</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">3</span></span></span></span></span></div></span>k+</h2>
-                    <p>Experienced Employees</p>
+                    <p>Correcteurs</p>
                 </div>
             </div>
-            <div class="col-lg-3 col-sm-6">
+            {{-- <div class="col-lg-3 col-sm-6">
+
+                <div class="pricing-three-item mb-30">
+                    <div class="pricing-three-head">                        
+                        <ul class="devices-icon-wrap">
+                            <img src="asset/img/icons/download.png" alt="" style="width: 100px">
+                        </ul>
+                    </div>
+                    <div class="pricing-three-list">
+                        <p>
+                            Téléchargez le fichier que vous souhaitez traduire.
+                        </p>
+                    </div>
+                </div>
                 <div class="counter-item">
                     <h2 class="title"><span class="odometer odometer-auto-theme" data-count="10"><div class="odometer-inside"><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">1</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">0</span></span></span></span></span></div></span>+</h2>
-                    <p>Certificate &amp; Awards Winner</p>
+                    <p>Avis</p>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
 </section>

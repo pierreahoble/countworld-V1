@@ -50,7 +50,7 @@
                                     <li class="active menu-item-has-children"><a href="{{ url('qui-sommes-nous') }}">A propos ?</a>
                                         <ul class="sub-menu">
                                             <li class="active"><a href="{{ url('notre-equipe') }}">Notre Equipe</a></li>
-                                            <li><a href="index-2.html">Devenir Correcteur</a></li>
+                                            {{-- <li><a href="#">Devenir Correcteur</a></li> --}}
                                             <li><a href="{{ url('nos-partenaires') }}">Nos Partenaires</a></li>
                                         </ul>
                                     </li>
