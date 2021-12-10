@@ -5,7 +5,7 @@
                 <div class="col-xl-8 col-md-7 col-sm-7">
                     <div class="header-top-left">
                         <ul>
-                            <li class="d-none d-xl-flex"><i class="flaticon-location"></i> 14/A, Queen Street City, New York, US</li>
+                            <li class="d-none d-xl-flex"><i class="flaticon-location"></i>Quebec-Montreal</li>
                             <li class="d-none d-lg-flex"><i class="flaticon-email"></i> contact@afrikascribe.com</li>
                             <li><i class="flaticon-clock"></i> Heure d'ouverture: 8h30 - 18h30</li>
                         </ul>

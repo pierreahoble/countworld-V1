@@ -7,20 +7,21 @@
                         <div class="footer-contact">
                             <div class="footer-call">
                                 <div class="icon">
-                                    <i class="flaticon-support"></i>
+                                    {{-- <i class="flaticon-support"></i> --}}
                                 </div>
                                 <div class="content">
-                                    <span>Call us 24/7</span>
-                                    <h6 class="title"><a href="tel:123">(987) 547587587</a></h6>
+                                    {{-- <span>AFRIKA SCRIBE</span> --}}
+                                    <h6 class="title"><a href="#">AFRIKA SCRIBE</a></h6>
                                 </div>
                             </div>
-                            <h6 class="title">Contact info</h6>
-                            <p>Street House, Greater London NW1 8JR, UK</p>
+                            {{-- <h6 class="title">Contact info</h6> --}}
+                            <img src="{{ url('asset/img/icons/grand_logo.jpg') }}" alt="">
                             <div class="footer-social">
                                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                                 <a href="#"><i class="fab fa-twitter"></i></a>
                                 <a href="#"><i class="fab fa-instagram"></i></a>
                                 <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-google"></i></a>
                             </div>
                         </div>
                     </div>
@@ -28,40 +29,45 @@
                 <div class="col-2">
                     <div class="footer-widget">
                         <div class="fw-title">
-                            <h4 class="title">Categories</h4>
+                            <h4 class="title">Menu</h4>
                         </div>
                         <ul class="fw-list">
-                            <li><a href="services-details.html">Laptops & Computers</a></li>
-                            <li><a href="services-details.html">Home & Life Style</a></li>
-                            <li><a href="services-details.html">Men's Fashion</a></li>
-                            <li><a href="services-details.html">Women's Fashion</a></li>
-                            <li><a href="services-details.html">Sport & Gyms</a></li>
+                            <li><a href="{{ url('qui-sommes-nous') }}">A propos</a></li>
+                            <li><a href="{{ url('tarifs') }}">ça coûte combien?</a></li>
+                            <li><a href="{{ url('comment-ca-marche') }}">Comment sa marche?</a></li>
+                            <li><a href="{{ url('comment-ca-marche') }}">Questions fréquentes</a></li>
+                            {{-- <li><a href="{{ url() }}">Sport & Gyms</a></li> --}}
                         </ul>
                     </div>
                 </div>
                 <div class="col-2">
                     <div class="footer-widget">
                         <div class="fw-title">
-                            <h4 class="title">About Company</h4>
+                            <h4 class="title">DOCUMENTS CORRIGÉS</h4>
                         </div>
                         <ul class="fw-list">
-                            <li><a href="about-us.html">About Company</a></li>
-                            <li><a href="contact.html">Contact Us</a></li>
-                            <li><a href="contact.html">Privacy policy</a></li>
-                            <li><a href="contact.html">Terms & Conditions</a></li>
-                            <li><a href="contact.html">Mission & Vision</a></li>
+                            <li>Mémoire</li>
+                            <li>Dissertation</li>
+                            <li>Thèse de doctorat</li>
+                            <li>Rapport de stage</li>
+                            <li>Projet professionnel</li>
+                            <li>Autres productions</li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-1">
                     <div class="footer-widget">
                         <div class="fw-title">
-                            <h4 class="title">Service Schedule</h4>
+                            <h4 class="title">CONTACT INFOS</h4>
                         </div>
                         <ul class="fw-schedule-list">
-                            <li>Saturday - Sunday - Mon <span>8:30 AM - 10 PM</span></li>
-                            <li>Tuesday - Wed - Thurs <span>9:30 AM - 12 PM</span></li>
-                            <li>Friday : <span class="close">Closed</span></li>
+                            <li>Adresse: <span>Quebec-Montreal</span></li>
+                            <li>( WhatsApp, Telegram) : <span>+1 (202) 670 6 562</span></li>
+                            <li>Email :  <span class="close">contact@afrikascribe.com</span></li>
+                            <li>MOYENS DE PAIEMENTS</li>
+                            <li>
+                                <img src="{{ url('asset/img/icons/paiement.jpg') }}" alt="">
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -78,7 +84,7 @@
                 </div>
                 <div class="col-md-8">
                     <div class="copyright-text text-center text-md-end">
-                        <p>Copyrighted by @Bdevs - All Right Reserved</p>
+                        <p>Copyrighted by @Afrika scribe - Tous droits reservés.</p>
                     </div>
                 </div>
             </div>

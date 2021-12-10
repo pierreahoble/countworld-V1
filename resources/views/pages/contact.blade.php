@@ -84,8 +84,8 @@
                     {{-- <p>We are the broadband internet service provider at New</p> --}}
                     <ul class="contact-info-list">
                         <li><i class="fal fa-phone"></i> <a href="tel:123">+1 (202) 670-6562</a></li>
-                        <li><i class="fal fa-envelope"></i> <a href="mailto:info@example.com">contact@afrikascribe.com</a></li>
-                        <li><i class="fal fa-map-marker-alt"></i> <span>3741 Hamilton Drive Huntingtown, <br> MD 20639</span></li>
+                        <li><i class="fal fa-envelope"></i> <a href="mailto:contact@afrikascribe.com">contact@afrikascribe.com</a></li>
+                        <li><i class="fal fa-map-marker-alt"></i> <span>Quebec-Montreal</span></li>
                     </ul>
                 </div>
                 {{-- <div class="contact-info-wrap">
