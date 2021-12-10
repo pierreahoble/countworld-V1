@@ -290,8 +290,55 @@
 
 
 
-
-
+<section class="faq-area  pb-120">
+    <div class="container">
+       
+        <div class="faq-wrapper">
+            <div class="accordion" id="accordionExample">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                   <h4>Questions fréquentes</h4>
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample" style="">
+                                <div class="accordion-body">
+                                    <ul class="list-group">
+                                        <li class="">1 - Quelle est la politique de confidentialité de AFRIKA SCRIBE?</li>
+                                        <li class="">2 - Comment supprimer ma commande?</li>
+                                        <li class="">3 - Quels types de documents AFRIKA SCRIBE corrige t-il?</li>
+                                        <li class="">4 - Est-ce que ma commande peut être corrigé pendant les weekends et les vacances?</li>
+                                        <li class="">5 - Quelle méthode de paiement préférez-vous ?</li>
+                                      </ul>
+                                </div>
+                            </div>
+                        </div>
+                       
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingSix">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSept" aria-expanded="false" aria-controls="collapseSix">
+                                    <h5>Contacter l'équipe </h5>
+                                </button>
+                            </h2>
+                            <div id="collapseSept" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p>Nous sommes joignables 24h/7j, toujours prêts pour vous servir.</p>
+                                    <p>Vous voulez nous contacter directement ? Pas de problème, nous sommes là pour vous.</p>
+                                    <p>+1 202 670 6 562</p>
+                                    <p>contact@afrikascribe.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 
 

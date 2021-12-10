@@ -305,7 +305,7 @@
           <div class="modal-content">
             <div class="modal-header">
               {{-- <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5> --}}
-              <img src="asset/img/products/shop_details01.png" alt="">              
+              <img src="{{ url('asset/img/icons/grand_logo.jpg') }}" alt="">              
             </div>
             <div class="modal-body">
              <p>

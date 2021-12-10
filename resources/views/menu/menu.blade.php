@@ -43,7 +43,7 @@
                     <div class="menu-wrap">
                         <nav class="menu-nav">
                             <div class="logo">
-                                <a href="/"><img src="{{ asset('asset/img/logo/logo.png') }}" alt=""></a>
+                                <a href="/"><img src="{{ url('asset/img/icons/grand_logo.jpg') }}" alt=""></a>
                             </div>
                             <div class="navbar-wrap main-menu d-none d-lg-flex">
                                 <ul class="navigation">
@@ -60,18 +60,16 @@
                                             <li><a href="{{ url('traduction-professionnelle') }}">Traduction et Certification</a></li>
                                             <li><a href="{{ url('comment-ca-marche') }}">Questions Fréquentes</a></li>
                                             <li><a href="{{ url('tarifs') }}"> Combien sa coûte?</a></li>
+                                            <li><a href="{{ url('services-additionnels') }}">Services Additionnels</a></li>
                                         </ul>
                                     </li>
-                                    {{-- <li class="menu-item-has-children"><a href="#">Pages</a>
+                                    <li class="menu-item-has-children"><a href="#">Documents</a>
                                         <ul class="sub-menu">
-                                            <li><a href="pricing.html">Our Packages</a></li>
-                                            <li><a href="team.html">Creative Team</a></li>
-                                            <li><a href="faq.html">Faq Page</a></li>
-                                            <li><a href="shop.html">Our Shop</a></li>
-                                            <li><a href="shop-details.html">Shop Details</a></li>
-                                            <li><a href="404.html">404 Page</a></li>
+                                            <li><a href="{{ url('document-en-francais') }}">Document en Français</a></li>
+                                            <li><a href="{{ url('document-en-anglais') }}">Document en Anglais</a></li>
+                                          
                                         </ul>
-                                    </li> --}}
+                                    </li>
                                     {{-- <li class="menu-item-has-children"><a href="blog.html">News</a>
                                         <ul class="sub-menu">
                                             <li><a href="blog.html">Our News</a></li>

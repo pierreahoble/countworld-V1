@@ -79,6 +79,8 @@ Route::view('traduction-professionnelle', 'pages.traduction');
 Route::view('certification-de-documents', 'pages.certification');
 Route::view('assistance-particuliere', 'pages.assistance');
 Route::view('comment-ca-marche', 'pages.faq');
+Route::view('document-en-francais', 'pages.francais');
+Route::view('document-en-anglais', 'pages.anglais');
 
 
 
