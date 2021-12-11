@@ -10,11 +10,11 @@
         <div class="row">
             <div class="col-lg-6 col-md-8">
                 <div class="breadcrumb-content">
-                    <h3 class="title">Expert Team</h3>
+                    <h3 class="title">Notre Expertise</h3>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Team</li>
+                            <li class="breadcrumb-item"><a href="{{ url('/') }}">Accueil</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Notre equipe</li>
                         </ol>
                     </nav>
                 </div>
@@ -36,12 +36,21 @@
             </div>
             <div class="col-lg-6">
                 <div class="section-title mb-30">
-                    <h2 class="title">We're Always Ready To Give Best Service</h2>
+                    <h2 class="title">- Qui sommes-nous?</h2>
                 </div>
                 <div class="experience-content">
-                    <p>We are the broadband internet service provider situated at New York City and on the other big reason pay more than they should is that they're too loyal.</p>
+                    <p>AFRIKA SCRIBE a été fondée en 2015 par des professionnels africains issus de la diaspora et de
+                        l'Afrique. Aujourd’hui, nous sommes une équipe solide, expérimentée et internationale avec plus
+                        de 300 correcteurs à travers le monde.</p>
+                    <br>
+                    <p>
+                        Nous sommes de véritables experts en correction et relecture de mémoires, thèses de doctorat,
+                        rapports de stage, rapports professionnels et autres documents. Nous travaillons avec
+                        détermination pour assister les étudiants et les professionnels à atteindre leurs objectifs
+                        universitaires ou professionnels.
+                    </p>
                     <div class="progress-item">
-                        <span class="title">Technical</span>
+                        <span class="title">Technique</span>
                         <div class="progress--bar" data-percentage="95%">
                             <div class="progress-number" style="left: 95%;">
                                 <span class="percent">95%</span>
@@ -62,7 +71,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="progress-item">
+                    {{-- <div class="progress-item">
                         <span class="title">Networking</span>
                         <div class="progress--bar" data-percentage="65%">
                             <div class="progress-number" style="left: 65%;">
@@ -72,7 +81,7 @@
                                 <div class="progress-fill" style="width: 65%;"></div>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>
@@ -80,13 +89,105 @@
 </section>
 
 
+<section class="counter-area pt-115 pb-65">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-sm-6">
+
+                <div class="pricing-three-item mb-30">
+                    <div class="pricing-three-head">                       
+                        <ul class="devices-icon-wrap">
+                            <img src="asset/img/icons/group.png" alt="" style="width: 100px">
+                        </ul>
+                    </div>
+                    <h6 class="title">Des correcteurs professionnels</h6> 
+                    <div class="pricing-three-list">
+                        <p>
+                            ls sont des professeurs d'universités en fonction ou retraités, de hauts cadres d'institutions internationales et des structures socio-professionnelles. Ils connaissent les exigences d'un travail de qualité et sont en mesure de répondre à vos besoins.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="counter-item">
+                    <h2 class="title"><span class="odometer odometer-auto-theme" data-count="50"><div class="odometer-inside"><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">5</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">0</span></span></span></span></span></div></span>+</h2>
+                    <p>Client</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="pricing-three-item mb-30">
+                    <div class="pricing-three-head">                        
+                        <ul class="devices-icon-wrap">
+                            <img src="asset/img/icons/anonymat.png" alt="" style="width: 100px">
+                        </ul>
+                    </div>
+                    <h6 class="titlw">Anonymat et discrétion</h6>
+                    <div class="pricing-three-list">
+                        <p>
+                            Nous corrigeons votre document dans l'anonymat total et vos données restent confidentielles. Nos correcteurs sont soumis à une règle d'éthique et prennent un engagement ferme de respect de l'anonymat et de la confidentialité. Le système dématérialisé ne leur permet pas de connaître l'identité de l'auteur de la commande.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="counter-item">
+                    <h2 class="title"><span class="odometer odometer-auto-theme" data-count="25"><div class="odometer-inside"><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">2</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">5</span></span></span></span></span></div></span>k+</h2>
+                    <p>Projets</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="pricing-three-item mb-30">
+                    <div class="pricing-three-head">                        
+                        <ul class="devices-icon-wrap">
+                            <img src="asset/img/icons/translation.png" alt="" style="width: 100px">
+                        </ul>
+                    </div>
+                    <h6 class="title">Délais respectés</h6>
+                    <div class="pricing-three-list">
+                        <p>
+                            Nous prenons l'engagement de respecter les délais. Recevez un email quand votre document est corrigé.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="counter-item">
+                    <h2 class="title"><span class="odometer odometer-auto-theme" data-count="23"><div class="odometer-inside"><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">2</span></span></span></span></span><span class="odometer-digit"><span class="odometer-digit-spacer">8</span><span class="odometer-digit-inner"><span class="odometer-ribbon"><span class="odometer-ribbon-inner"><span class="odometer-value">3</span></span></span></span></span></div></span>k+</h2>
+                    <p>Correcteurs</p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <section class="team-area pt-110 pb-80">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-xl-6 col-lg-7">
                 <div class="section-title text-center mb-50">
-                    <h2 class="title">Meet Our Skilled Team</h2>
+                    <h2 class="title">Nos correspondants</h2>
                 </div>
+                <p class="text-justify">
+                    Nous nous assurons que tout se passe parfaitement bien. Nous répondons à vos questions, trouvons le meilleur correcteur pour vous, et nous garantissons la meilleure qualité de relecture et correction pour votre travail.
+                </p>
             </div>
         </div>
         <div class="row justify-content-center">
@@ -232,9 +333,10 @@
 
 
 
-<section class="team-hiring-area">
+{{-- <section class="team-hiring-area">
     <div class="container">
-        <div class="hiring-bg wow fadeInUp" data-wow-delay=".2s" data-background="asset/img/bg/hiring_bg.jpg" style="background-image: url(&quot;img/bg/hiring_bg.jpg&quot;); visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+        <div class="hiring-bg wow fadeInUp" data-wow-delay=".2s" data-background="asset/img/bg/hiring_bg.jpg"
+            style="background-image: url(&quot;img/bg/hiring_bg.jpg&quot;); visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
             <div class="row align-items-center">
                 <div class="col-lg-7">
                     <div class="team-hiring-content">
@@ -249,6 +351,6 @@
             </div>
         </div>
     </div>
-</section>
-    
+</section> --}}
+
 @endsection

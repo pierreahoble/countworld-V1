@@ -47,26 +47,27 @@
                             </div>
                             <div class="navbar-wrap main-menu d-none d-lg-flex">
                                 <ul class="navigation">
-                                    <li class="active menu-item-has-children"><a href="{{ url('qui-sommes-nous') }}">A propos ?</a>
+                                    <li class="{{ request()->is('notre-equipe') || request()->is('nos-partenaires')?'active':'' }} menu-item-has-children"><a href="{{ url('qui-sommes-nous') }}">A propos ?</a>
                                         <ul class="sub-menu">
-                                            <li class="active"><a href="{{ url('notre-equipe') }}">Notre Equipe</a></li>
+                                            <li class="{{ request()->is('notre-equipe')?'active':'' }}"><a href="{{ url('notre-equipe') }}">Notre Equipe</a></li>
                                             {{-- <li><a href="#">Devenir Correcteur</a></li> --}}
-                                            <li><a href="{{ url('nos-partenaires') }}">Nos Partenaires</a></li>
+                                            <li class="{{ request()->is('nos-partenaires')?'active':'' }}"><a href="{{ url('nos-partenaires') }}">Nos Partenaires</a></li>
                                         </ul>
                                     </li>
-                                    <li class="menu-item-has-children"><a href="#">Nos Services</a>
+                                    <li class="{{ request()->is('relecture-correction')|| request()->is('traduction-professionnelle')|| request()->is('comment-ca-marche')|| request()->is('tarifs') || request()->is('services-additionnels')?'active':'' }}
+                                    menu-item-has-children"><a href="#">Nos Services</a>
                                         <ul class="sub-menu">                                              
-                                            <li><a href="{{ url('relecture-correction') }}">Relectures et Corrections</a></li>
-                                            <li><a href="{{ url('traduction-professionnelle') }}">Traduction et Certification</a></li>
-                                            <li><a href="{{ url('comment-ca-marche') }}">Questions Fréquentes</a></li>
-                                            <li><a href="{{ url('tarifs') }}"> Combien sa coûte?</a></li>
-                                            <li><a href="{{ url('services-additionnels') }}">Services Additionnels</a></li>
+                                            <li class="{{ request()->is('relecture-correction')?'active':'' }}"><a href="{{ url('relecture-correction') }}">Relectures et Corrections</a></li>
+                                            <li class="{{ request()->is('traduction-professionnelle')?'active':'' }}" ><a href="{{ url('traduction-professionnelle') }}">Traduction et Certification</a></li>
+                                            <li class="{{ request()->is('comment-ca-marche')?'active':'' }}" ><a href="{{ url('comment-ca-marche') }}">Questions Fréquentes</a></li>
+                                            <li class="{{ request()->is('tarifs')?'active':'' }}" ><a href="{{ url('tarifs') }}"> Combien sa coûte?</a></li>
+                                            <li class="{{ request()->is('services-additionnels')?'active':'' }}" ><a href="{{ url('services-additionnels') }}">Services Additionnels</a></li>
                                         </ul>
                                     </li>
-                                    <li class="menu-item-has-children"><a href="#">Documents</a>
+                                    <li class="{{ request()->is('document-en-francais') || request()->is('document-en-anglais')?'active':'' }} menu-item-has-children"><a href="#">Documents</a>
                                         <ul class="sub-menu">
-                                            <li><a href="{{ url('document-en-francais') }}">Document en Français</a></li>
-                                            <li><a href="{{ url('document-en-anglais') }}">Document en Anglais</a></li>
+                                            <li class="{{ request()->is('document-en-francais')?'active':'' }}" ><a href="{{ url('document-en-francais') }}">Document en Français</a></li>
+                                            <li class="{{ request()->is('document-en-anglais')?'active':'' }}" ><a href="{{ url('document-en-anglais') }}">Document en Anglais</a></li>
                                           
                                         </ul>
                                     </li>
@@ -76,7 +77,7 @@
                                             <li><a href="blog-details.html">News Details</a></li>
                                         </ul>
                                     </li> --}}
-                                    <li><a href="{{ url('nous-contacter') }}">Nous contacter</a></li>
+                                    <li class="{{ request()->is('nous-contacter')?'active':'' }}"><a href="{{ url('nous-contacter') }}">Nous contacter</a></li>
                                 </ul>
                             </div>
                             
